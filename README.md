@@ -143,7 +143,7 @@ build = {
 }
 ```
 
-## 5、添加github tag到rockspec文件中
+## 5、添加github tags(可选)
 ```
 #注意：这里的标签名必须和version一致，否则后面操作会报错
 git tag v1.0-1
@@ -159,10 +159,10 @@ git commit -am 'your commit'
 git push -u origin master
 ```
 
-## 6、注册luarocks并创建api-key
+## 7、注册luarocks并创建api-key
 注册地址[在这](https://luarocks.org/)，注册完成之后，点击菜单里面的 Settings ，进去之后再点击 API keys，在这里你就可以创建自己的api-keys了，创建好之后复制一下，接下来我们会用到。
 
-## 7、上传你的lua-package包
+## 8、上传你的lua-package包
 ```
 luarocks upload your-rockspec-name.rockspec --api-key=your-api-key
 ```
@@ -170,7 +170,7 @@ luarocks upload your-rockspec-name.rockspec --api-key=your-api-key
 
 ![luarocks-package](./imgs/luarocks-package.png)
 
-## 8、安装并使用lua-package包
+## 9、安装并使用lua-package包
 ```
 luarocks install lua-package
 ```
@@ -193,7 +193,7 @@ curl "http://127.0.0.1/test"
 zhangwei
 ```
 
-## 9 、引用
+## 10 、引用
 1. [源码](https://github.com/zhangwei900808/lua-package)
 
 2. [Creating a rock](https://github.com/luarocks/luarocks/wiki/Creating-a-rock)
