@@ -55,6 +55,8 @@ version = "dev-1"
 source = {
    #这里我指定的是我当前包所在的github托管地址
    url = "git://github.com/zhangwei900808/lua-package.git",
+   #指定tag版本号(注意这里的tag要和version保持一致否则安装会报错)
+   tag = "vdev-1",
    #设置为master分支
    branch = "master"
 }
@@ -118,6 +120,7 @@ package = "lua-package"
 version = "dev-1"
 source = {
    url = "git://github.com/zhangwei900808/lua-package.git",
+   tag = "vdev-1",
    branch = "master"
 }
 description = {
