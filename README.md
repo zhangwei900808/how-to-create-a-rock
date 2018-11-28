@@ -161,7 +161,7 @@ luarocks upload your-rockspec-name.rockspec --api-key=your-api-key
 
 ![luarocks-package](./imgs/luarocks-package.png)
 
-##7、安装并使用lua-package包
+## 8、安装并使用lua-package包
 ```
 luarocks install lua-package
 ```
