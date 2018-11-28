@@ -145,9 +145,15 @@ build = {
 
 ## 5、添加github tags(可选)
 ```
-#注意：这里的标签名必须和version一致，否则后面操作会报错
 git tag v1.0-1
 git push --tags
+```
+如果发现tag打错了，可以使用下面代码进行删除
+```
+#删除本地版本
+git tag -d your-tag
+#删除远程仓库版本
+git push origin :refs/tags/your-tag
 ```
 
 ## 6、推送代码到github上面并添加和修改README.md文件
