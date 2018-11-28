@@ -68,11 +68,20 @@ description = {
    #指定开源协议
    license = "MIT"
 }
+#设置Lua的依赖环境
+dependencies = {
+  "lua >= 5.1, < 5.4"
+}
 build = { 
    type = "builtin",
    modules = {}
 }
 ```
-## 
+## 添加github tag到rockspec文件中
+```
+#注意：这里的标签名必须和version一致，否则后面操作会报错
+git tag vdev-1
+git push --tags
+```
 
 #
