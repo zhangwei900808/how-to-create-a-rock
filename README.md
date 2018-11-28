@@ -194,6 +194,8 @@ zhangwei
 ```
 
 ## 9 、引用
-1).[源码](https://github.com/zhangwei900808/lua-package)
-2).[Creating a rock](https://github.com/luarocks/luarocks/wiki/Creating-a-rock)
-3).[Lua包管理工具Luarocks详解](https://my.oschina.net/idevz/blog/519598)
+1. [源码](https://github.com/zhangwei900808/lua-package)
+
+2. [Creating a rock](https://github.com/luarocks/luarocks/wiki/Creating-a-rock)
+
+3. [Lua包管理工具Luarocks详解](https://my.oschina.net/idevz/blog/519598)
