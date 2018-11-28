@@ -14,7 +14,7 @@ make build && make install
 cd ..
 ```
 
-## 3、创建.rockspec文件并修改
+## 3、创建rockspec文件并修改
 
 ```
 mkdir lua-package
@@ -22,7 +22,7 @@ cd lua-package
 luarocks write_rockspec
 ```
 
-执行完之后会发现多了一个 lua-package-dev-1.rockspec 文件，这个文件就是我们创建的 .rockspec 文件，接着我们打开这个文件，查看里面的元信息，如下所示
+执行完之后会发现多了一个 lua-package-dev-1.rockspec 文件，这个文件就是我们创建的 rockspec 文件，接着我们打开这个文件，查看里面的元信息，如下所示
 
 ```
 #该包名
