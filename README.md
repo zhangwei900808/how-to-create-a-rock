@@ -15,7 +15,11 @@ cd ..
 ```
 
 ## 创建.rockspec文件
-环境安装好之后，
+```
+mkdir lua-package
+cd lua-package
+luarocks write_rockspec
+```
 
 #
 
