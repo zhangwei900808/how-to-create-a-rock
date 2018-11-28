@@ -160,3 +160,26 @@ luarocks upload your-rockspec-name.rockspec --api-key=your-api-key
 成功之后，我们到luarocks[官网](https://luarocks.org/)看看你刚上传的包，如下是我上传的结果
 
 ![luarocks-package](./imgs/luarocks-package.png)
+
+##7、安装并使用lua-package包
+```
+luarocks install lua-package
+```
+接下来我们写一段代码测试下lua-package可用性，如下所示：
+
+```
+location /test {
+    content_by_lua_block {
+        local package = require("lua-package")
+        local packageObj = package:new('zhang', 'wei')
+        ngx.say(packageObj:get_fullname())
+    }
+}
+```
+启动这段代码，并访问查看输出结果：
+
+```
+curl "http://127.0.0.1/test"
+
+zhangwei
+```
