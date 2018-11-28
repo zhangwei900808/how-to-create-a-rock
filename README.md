@@ -55,7 +55,7 @@ version = "1.0-1"
 source = {
    #这里我指定的是我当前包所在的github托管地址
    url = "git://github.com/zhangwei900808/lua-package.git",
-   #指定tag版本号(注意这里的tag要和version保持一致否则安装会报错)
+   #指定tag版本号
    tag = "v1.0-1",
    #设置为master分支
    branch = "master"
@@ -150,6 +150,15 @@ git tag v1.0-1
 git push --tags
 ```
 
+## 6、推送代码到github上面并添加和修改README.md文件
+```
+touch README.md
+vim README.md
+git add .
+git commit -am 'your commit'
+git push -u origin master
+```
+
 ## 6、注册luarocks并创建api-key
 注册地址[在这](https://luarocks.org/)，注册完成之后，点击菜单里面的 Settings ，进去之后再点击 API keys，在这里你就可以创建自己的api-keys了，创建好之后复制一下，接下来我们会用到。
 
@@ -185,13 +194,6 @@ zhangwei
 ```
 
 ## 9 、引用
-1).[]()
-1).[]()
-1).[]()
-1).[]()
-1).[]()
-1).[]()
-1).[]()
-1).[]()
-1).[]()
-1).[]()
+1).[源码](https://github.com/zhangwei900808/lua-package)
+2).[Creating a rock](https://github.com/luarocks/luarocks/wiki/Creating-a-rock)
+3).[Lua包管理工具Luarocks详解](https://my.oschina.net/idevz/blog/519598)
