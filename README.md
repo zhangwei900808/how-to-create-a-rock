@@ -143,20 +143,7 @@ build = {
 }
 ```
 
-## 5、添加github tags
-```
-git tag v1.0-1
-git push --tags
-```
-如果发现tag打错了，可以使用下面代码进行删除
-```
-#删除本地版本
-git tag -d your-tag
-#删除远程仓库版本
-git push origin :refs/tags/your-tag
-```
-
-## 6、推送代码到github并添加README.md文件
+## 5、推送代码到github并添加README.md文件
 ```
 touch README.md
 vim README.md
@@ -172,6 +159,20 @@ git checkout gh-pages
 git push --set-upstream origin gh-pages
 ```
 ![github-pages-setting](./imgs/github-pages-setting.png)
+
+
+## 6、添加github tags
+```
+git tag v1.0-1
+git push --tags
+```
+如果发现tag打错了，可以使用下面代码进行删除
+```
+#删除本地版本
+git tag -d your-tag
+#删除远程仓库版本
+git push origin :refs/tags/your-tag
+```
 
 ## 7、注册luarocks并创建api-key
 注册地址[在这](https://luarocks.org/)，注册完成之后，点击菜单里面的 Settings ，进去之后再点击 API keys，在这里你就可以创建自己的api-keys了，创建好之后复制一下，接下来我们会用到。
