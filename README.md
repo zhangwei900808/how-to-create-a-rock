@@ -27,7 +27,7 @@ luarocks write_rockspec
 ```
 #该包名
 package = "lua-package"
-#版本号
+#版本号(注意：1、版本号和你文件名所包含的版本号要一致，如这里的版本号是：dev-1，文件名是：lua-package-dev-1.rockspec，2、版本号要以-x结尾，如0.0.1-1，1.3-1，如果你不按照这种规则定义则会报错！)
 version = "dev-1"
 source = {
    #指定源码的位置
