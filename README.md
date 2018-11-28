@@ -143,7 +143,7 @@ build = {
 }
 ```
 
-## 5、添加github tags(可选)
+## 5、添加github tags
 ```
 git tag v1.0-1
 git push --tags
