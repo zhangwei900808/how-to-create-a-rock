@@ -161,7 +161,7 @@ git push --set-upstream origin gh-pages
 ![github-pages-setting](./imgs/github-pages-setting.png)
 
 
-## 6、添加github tags
+## 6、添加git tags
 ```
 git tag v1.0-1
 git push --tags
