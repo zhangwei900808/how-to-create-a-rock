@@ -156,14 +156,22 @@ git tag -d your-tag
 git push origin :refs/tags/your-tag
 ```
 
-## 6、推送代码到github上面并添加和修改README.md文件
+## 6、推送代码到github并添加README.md文件
 ```
 touch README.md
 vim README.md
+
 git add .
 git commit -am 'your commit'
 git push -u origin master
 ```
+并添加gh-pages分支做为 rockspec的homepage使用，如下所示：
+```
+git branch gh-pages
+git checkout gh-pages
+git push --set-upstream origin gh-pages
+```
+![github-pages-setting](./imgs/github-pages-setting.png)
 
 ## 7、注册luarocks并创建api-key
 注册地址[在这](https://luarocks.org/)，注册完成之后，点击菜单里面的 Settings ，进去之后再点击 API keys，在这里你就可以创建自己的api-keys了，创建好之后复制一下，接下来我们会用到。
