@@ -157,3 +157,6 @@ git push --tags
 ```
 luarocks upload your-rockspec-name.rockspec --api-key=your-api-key
 ```
+成功之后，我们到luarocks[官网](https://luarocks.org/)看看你刚上传的包，如下是我上传的结果
+
+![luarocks-package](./imgs/luarocks-package.png)
