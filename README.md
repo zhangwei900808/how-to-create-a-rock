@@ -14,7 +14,7 @@ make build && make install
 cd ..
 ```
 
-## 3、创建.rockspec文件
+## 3、创建.rockspec文件并修改
 
 ```
 mkdir lua-package
@@ -47,7 +47,7 @@ build = {
    modules = {}
 }
 ```
-现在我们来修改下 lua-package-dev-1.rockspec 文件，如下所示：
+现在我们来修改下 rockspec 文件，如下所示：
 
 ```
 package = "lua-package"
@@ -77,11 +77,74 @@ build = {
    modules = {}
 }
 ```
-## 添加github tag到rockspec文件中
+## 4、创建lua-package.lua文件，并修改rockspec文件
+```
+touch lua-package.lua
+```
+创建好之后，接着我们编辑这个文件，加入下面代码
+
+```
+local _M = {}
+_M._VERSION = '0.1'
+
+local mt = { __index = _M }
+
+function _M.new( self, firstname, lastname )
+    return setmetatable({
+        firstname = firstname,
+        lastname = lastname
+    }, mt)
+end
+
+function _M.get_fullname(self)
+    return self.firstname .. self.lastname
+end
+
+return _M
+
+```
+
+修改之后，我们在rockspec文件里面加上这段
+```
+modules = {
+     ["lua-package"] = "lua-package.lua"
+   }
+```
+
+完整的rockspec代码如下所示：
+
+```
+package = "lua-package"
+version = "dev-1"
+source = {
+   url = "git://github.com/zhangwei900808/lua-package.git",
+   branch = "master"
+}
+description = {
+   summary = "A test lua package with luarocks",
+   homepage = "https://github.com/zhangwei900808/lua-package",
+   maintainer = "zhangwei<zw900808@gmail.com>",
+   license = "MIT"
+}
+dependencies = {
+  "lua >= 5.1, < 5.4"
+}
+build = {
+   type = "builtin",
+   modules = {
+     ["lua-package"] = "lua-package.lua"
+   }
+}
+```
+
+## 5、添加github tag到rockspec文件中
 ```
 #注意：这里的标签名必须和version一致，否则后面操作会报错
 git tag vdev-1
 git push --tags
 ```
 
-#
+## 6、注册luarocks并创建api-key
+注册地址[在这](https://luarocks.org/)，注册完成之后，点击菜单里面的 Settings ，进去之后再点击 API keys，在这里你就可以创建自己的api-keys了，创建好之后复制一下，接下来我们会用到。
+
+## 7、打包并上传你的
