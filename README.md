@@ -176,6 +176,8 @@ git push --set-upstream origin gh-pages
 ## 7、注册luarocks并创建api-key
 注册地址[在这](https://luarocks.org/)，注册完成之后，点击菜单里面的 Settings ，进去之后再点击 API keys，在这里你就可以创建自己的api-keys了，创建好之后复制一下，接下来我们会用到。
 
+![luarocks-api-key](./imgs/luarocks-api-key.png)
+
 ## 8、上传你的lua-package包
 ```
 luarocks upload your-rockspec-name.rockspec --api-key=your-api-key
