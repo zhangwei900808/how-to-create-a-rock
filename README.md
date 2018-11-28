@@ -25,20 +25,27 @@ luarocks write_rockspec
 执行完之后会发现多了一个lua-package-dev-1.rockspec文件，这个文件就是我们创建的.rockspec文件，接着我们打开这个文件，查看里面的元信息，如下所示
 
 ```
+#该包名
 package = "lua-package"
+#版本号
 version = "dev-1"
 source = {
+   #指定源码的位置
    url = "*** please add URL for source tarball, zip or repository here ***"
 }
 description = {
+   #该包所在的说明文档位置
    homepage = "*** please enter a project homepage ***",
+   #指明所基于的开源协议
    license = "*** please specify a license ***"
 }
 build = {
+   #编译方式
    type = "builtin",
    modules = {}
 }
 ```
-#
+这里
+## 
 
 #
